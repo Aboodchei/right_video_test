@@ -14,6 +14,10 @@ class Checkout
     self
   end
 
+  def quantity_of_item(item_type)
+    items.count{ |item| item.type == item_type }
+  end
+
   private
 
   def calculate_total!
@@ -24,8 +28,5 @@ class Checkout
     @rules.sort.each{ |rule| rule.check_applicability_and_apply!(self) }
   end
 
-  def quantity_of_item(item_type)
-    items.count{ |item| item.type == item_type }
-  end
 
 end

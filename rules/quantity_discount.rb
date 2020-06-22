@@ -1,6 +1,6 @@
 module Rules
   class QuantityDiscount < Rule
-    PRIORITY = 1
+    PRIORITY = 2
     attr_reader :item_type, :quantity, :discount_amount
 
     def initialize(item_type:, quantity:, discount_amount:)

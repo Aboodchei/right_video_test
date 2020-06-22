@@ -1,6 +1,6 @@
 module Rules
   class TotalDiscount < Rule
-    PRIORITY = 2
+    PRIORITY = 1
     attr_reader :total_condition, :total_amount, :discount_amount
 
     def initialize(total_amount:, discount_amount:)
